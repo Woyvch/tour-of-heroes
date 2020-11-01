@@ -1,0 +1,16 @@
+<div *ngIf="hero">
+  <!-- The component should only display the selected hero details if the hero exists -->
+  <h2>{{hero.name | uppercase}} Details</h2>
+  <div><span>id: </span>{{hero.id}}</div>
+  <!--<div><span>name: </span>{{hero.name}}</div>-->
+  <div>
+    <label>name:
+      <input [(ngModel)]="hero.name" placeholder="name"/>
+    </label>
+  </div>
+  <!--Add a go back button and bind it to the component's goBack() method-->
+  <button (click)="goBack()">go back</button>
+  <!--Add a save button that invokes a component method named save()-->
+  <button (click)="save()">save</button>
+</div>
+
